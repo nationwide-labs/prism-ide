@@ -1,4 +1,4 @@
-# Prism-ide
+# Prism-IDE
 What is Prism IDE? – IDE is the front-end bot designer that provides cool drag & drop, point & click capabilities that will feed into the Prism bot library.
 
 Prism is currently used to prototype chatbots internally. We are continuing to enhance Prism and developing a unit test suit. Please use it as you see fit. We'd love to have you participate in enhancing the asset and help develop unit test cases for Prism!
