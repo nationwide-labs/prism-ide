@@ -1,0 +1,7 @@
+out
+node_modules
+*.vsix
+gen.js
+*party*.txt
+package-lock.json
+*.tgz

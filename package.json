@@ -1,0 +1,753 @@
+{
+	"name": "prism-ide",
+	"displayName": "prism",
+	"publisher": "nationwide",
+	"description": "",
+	"version": "0.0.10",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "prism-explorer",
+					"title": "Prism",
+					"icon": "media/change.svg"
+				}
+			]
+		},
+		"views": {
+			"prism-explorer": [
+				{
+					"id": "bots",
+					"name": "Bots"
+				},
+				{
+					"id": "intents",
+					"name": "Intents"
+				},
+				{
+					"id": "commands",
+					"name": "Commands"
+				},
+				{
+					"id": "tasks",
+					"name": "Tasks"
+				},
+				{
+					"id": "servers",
+					"name": "Servers"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "bot.speakSlow.toggle",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "bot.main.toggle",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "bot.main.code",
+				"title": "Main Code"
+			},
+			{
+				"command": "bot.interceptor.toggle",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "bot.interceptor.code",
+				"title": "Interceptor Code"
+			},
+			{
+				"command": "bot.intents.toggle",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "bot.intent.default",
+				"title": "Set Default Intent"
+			},
+			{
+				"command": "bot.intent.trigger",
+				"title": "Set Trigger Intent"
+			},
+			{
+				"command": "bot.utterances.toggle",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "bot.commands.toggle",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "bot.commandHelp.toggle",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "bot.commandPrefix",
+				"title": "Set Command Prefix"
+			},
+			{
+				"command": "bot.tasks.toggle",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "bot.setup",
+				"title": "Setup"
+			},
+			{
+				"command": "server.bot.publish",
+				"title": "Publish Bot",
+				"icon": {
+					"dark": "resources/dark/repo-push.svg",
+					"light": "resources/light/repo-push.svg"
+				}
+			},
+			{
+				"command": "server.bot.ping",
+				"title": "Ping Bot",
+				"icon": {
+					"dark": "resources/dark/repo-push.svg",
+					"light": "resources/light/repo-push.svg"
+				}
+			},
+			{
+				"command": "server.add",
+				"title": "Add",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "server.refresh",
+				"title": "Refresh Servers",
+				"icon": {
+					"dark": "resources/dark/refresh.svg",
+					"light": "resources/light/refresh.svg"
+				}
+			},
+			{
+				"command": "server.rename",
+				"title": "Rename"
+			},
+			{
+				"command": "server.credentials",
+				"title": "Set Credentials"
+			},
+			{
+				"command": "server.url",
+				"title": "Url"
+			},
+			{
+				"command": "server.delete",
+				"title": "Delete"
+			},
+			{
+				"command": "bot.refresh",
+				"title": "Refresh Bots",
+				"icon": {
+					"dark": "resources/dark/refresh.svg",
+					"light": "resources/light/refresh.svg"
+				}
+			},
+			{
+				"command": "intent.refresh",
+				"title": "Refresh Intents",
+				"icon": {
+					"dark": "resources/dark/refresh.svg",
+					"light": "resources/light/refresh.svg"
+				}
+			},
+			{
+				"command": "intent.add",
+				"title": "Add",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "intent.rename",
+				"title": "Rename"
+			},
+			{
+				"command": "intent.setDefault",
+				"title": "Set Default"
+			},
+			{
+				"command": "intent.unsetDefault",
+				"title": "Unset Default"
+			},
+			{
+				"command": "intent.enable",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "intent.delete",
+				"title": "Delete"
+			},
+			{
+				"command": "utterance.add",
+				"title": "Add Utterance",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "utterance.edit",
+				"title": "Edit Utterance",
+				"icon": {
+					"dark": "resources/dark/edit.svg",
+					"light": "resources/light/edit.svg"
+				}
+			},
+			{
+				"command": "utterance.delete",
+				"title": "Delete Utterance",
+				"icon": {
+					"dark": "resources/dark/trash.svg",
+					"light": "resources/light/trash.svg"
+				}
+			},
+			{
+				"command": "trigger.add",
+				"title": "Add Trigger",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "trigger.edit",
+				"title": "Edit Trigger",
+				"icon": {
+					"dark": "resources/dark/edit.svg",
+					"light": "resources/light/edit.svg"
+				}
+			},
+			{
+				"command": "trigger.delete",
+				"title": "Delete Trigger",
+				"icon": {
+					"dark": "resources/dark/trash.svg",
+					"light": "resources/light/trash.svg"
+				}
+			},
+			{
+				"command": "node.delete",
+				"title": "Delete"
+			},
+			{
+				"command": "state.add",
+				"title": "Add State",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "state.edit",
+				"title": "Edit State",
+				"icon": {
+					"dark": "resources/dark/edit.svg",
+					"light": "resources/light/edit.svg"
+				}
+			},
+			{
+				"command": "state.node",
+				"title": "Set Node"
+			},
+			{
+				"command": "state.delete",
+				"title": "Delete State",
+				"icon": {
+					"dark": "resources/dark/trash.svg",
+					"light": "resources/light/trash.svg"
+				}
+			},
+			{
+				"command": "answer.add",
+				"title": "Add Answer",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "answer.edit",
+				"title": "Edit Answer",
+				"icon": {
+					"dark": "resources/dark/edit.svg",
+					"light": "resources/light/edit.svg"
+				}
+			},
+			{
+				"command": "answer.moveUp",
+				"title": "Move Up"
+			},
+			{
+				"command": "answer.moveDown",
+				"title": "Move Down"
+			},
+			{
+				"command": "answer.node",
+				"title": "Set Node"
+			},
+			{
+				"command": "answer.delete",
+				"title": "Delete Answer",
+				"icon": {
+					"dark": "resources/dark/trash.svg",
+					"light": "resources/light/trash.svg"
+				}
+			},
+			{
+				"command": "command.add",
+				"title": "Add",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "command.rename",
+				"title": "Rename"
+			},
+			{
+				"command": "command.description",
+				"title": "Description"
+			},
+			{
+				"command": "command.delete",
+				"title": "Delete"
+			},
+			{
+				"command": "command.enable",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "command.enableHelp",
+				"title": "Enable/Disable Help"
+			},
+			{
+				"command": "command.refresh",
+				"title": "Refresh",
+				"icon": {
+					"dark": "resources/dark/refresh.svg",
+					"light": "resources/light/refresh.svg"
+				}
+			},
+			{
+				"command": "command.option.add",
+				"title": "Add",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "command.option.flags",
+				"title": "Flags"
+			},
+			{
+				"command": "command.option.description",
+				"title": "Description"
+			},
+			{
+				"command": "command.option.defaultValue",
+				"title": "Default Value"
+			},
+			{
+				"command": "command.option.delete",
+				"title": "Delete"
+			},
+			{
+				"command": "task.add",
+				"title": "Add",
+				"icon": {
+					"dark": "resources/dark/add.svg",
+					"light": "resources/light/add.svg"
+				}
+			},
+			{
+				"command": "task.refresh",
+				"title": "Refresh",
+				"icon": {
+					"dark": "resources/dark/refresh.svg",
+					"light": "resources/light/refresh.svg"
+				}
+			},
+			{
+				"command": "task.rename",
+				"title": "Rename"
+			},
+			{
+				"command": "task.schedule",
+				"title": "Schedule"
+			},
+			{
+				"command": "task.enable",
+				"title": "Enable/Disable"
+			},
+			{
+				"command": "task.delete",
+				"title": "Delete"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "bot.refresh",
+					"when": "view == bots",
+					"group": "navigation"
+				},
+				{
+					"command": "intent.add",
+					"when": "view == intents",
+					"group": "navigation"
+				},
+				{
+					"command": "intent.refresh",
+					"when": "view == intents",
+					"group": "navigation"
+				},
+				{
+					"command": "server.add",
+					"when": "view == servers",
+					"group": "navigation"
+				},
+				{
+					"command": "server.refresh",
+					"when": "view == servers",
+					"group": "navigation"
+				},
+				{
+					"command": "command.add",
+					"when": "view == commands",
+					"group": "navigation"
+				},
+				{
+					"command": "command.refresh",
+					"when": "view == commands",
+					"group": "navigation"
+				},
+				{
+					"command": "task.add",
+					"when": "view == tasks",
+					"group": "navigation"
+				},
+				{
+					"command": "task.refresh",
+					"when": "view == tasks",
+					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "bot.setup",
+					"when": "view == bots && viewItem == botUndeclared",
+					"group": "7_modification"
+				},
+				{
+					"command": "bot.speakSlow.toggle",
+					"when": "view == bots && viewItem == bot.speakSlow",
+					"group": "1_modification"
+				},
+				{
+					"command": "bot.main.toggle",
+					"when": "view == bots && viewItem == bot.main",
+					"group": "1_modification"
+				},
+				{
+					"command": "bot.interceptor.toggle",
+					"when": "view == bots && viewItem == bot.interceptor",
+					"group": "1_modification"
+				},
+				{
+					"command": "bot.intents.toggle",
+					"when": "view == bots && viewItem == bot.intents",
+					"group": "1_modification"
+				},
+				{
+					"command": "bot.intent.default",
+					"when": "view == bots && viewItem == bot.defaultIntent",
+					"group": "2_modification"
+				},
+				{
+					"command": "bot.intent.trigger",
+					"when": "view == bots && viewItem == bot.triggerIntent",
+					"group": "2_modification"
+				},
+				{
+					"command": "bot.utterances.toggle",
+					"when": "view == bots && viewItem == bot.utterances",
+					"group": "1_modification"
+				},
+				{
+					"command": "bot.commands.toggle",
+					"when": "view == bots && viewItem == bot.commands",
+					"group": "1_modification"
+				},
+				{
+					"command": "bot.commandHelp.toggle",
+					"when": "view == bots && viewItem == bot.commandHelp",
+					"group": "1_modification"
+				},
+				{
+					"command": "bot.commandPrefix",
+					"when": "view == bots && viewItem == bot.commandPrefix",
+					"group": "1_modification"
+				},
+				{
+					"command": "bot.tasks.toggle",
+					"when": "view == bots && viewItem == bot.tasks",
+					"group": "1_modification"
+				},
+				{
+					"command": "intent.rename",
+					"when": "view == intents && viewItem == intent",
+					"group": "1_modification"
+				},
+				{
+					"command": "intent.enable",
+					"when": "view == intents && viewItem == intent",
+					"group": "2_modification"
+				},
+				{
+					"command": "intent.delete",
+					"when": "view == intents && viewItem == intent",
+					"group": "7_modification"
+				},
+				{
+					"command": "utterance.add",
+					"when": "view == intents && viewItem == utterances",
+					"group": "inline"
+				},
+				{
+					"command": "utterance.edit",
+					"when": "view == intents && viewItem == utterance",
+					"group": "inline"
+				},
+				{
+					"command": "utterance.delete",
+					"when": "view == intents && viewItem == utterance",
+					"group": "7_modification"
+				},
+				{
+					"command": "trigger.add",
+					"when": "view == intents && viewItem == triggers",
+					"group": "inline"
+				},
+				{
+					"command": "trigger.edit",
+					"when": "view == intents && viewItem == trigger",
+					"group": "inline"
+				},
+				{
+					"command": "trigger.delete",
+					"when": "view == intents && viewItem == trigger",
+					"group": "7_modification"
+				},
+				{
+					"command": "node.delete",
+					"when": "view == intents && viewItem == node",
+					"group": "1_modification"
+				},
+				{
+					"command": "state.add",
+					"when": "view == intents && viewItem == states",
+					"group": "inline"
+				},
+				{
+					"command": "state.edit",
+					"when": "view == intents && viewItem == state",
+					"group": "inline"
+				},
+				{
+					"command": "state.node",
+					"when": "view == intents && viewItem == state",
+					"group": "1_modification"
+				},
+				{
+					"command": "state.delete",
+					"when": "view == intents && viewItem == state",
+					"group": "7_modification"
+				},
+				{
+					"command": "answer.add",
+					"when": "view == intents && viewItem == answers",
+					"group": "inline"
+				},
+				{
+					"command": "answer.edit",
+					"when": "view == intents && viewItem == answer",
+					"group": "inline"
+				},
+				{
+					"command": "answer.moveUp",
+					"when": "view == intents && viewItem == answer",
+					"group": "1_modification"
+				},
+				{
+					"command": "answer.moveDown",
+					"when": "view == intents && viewItem == answer",
+					"group": "2_modification"
+				},
+				{
+					"command": "answer.node",
+					"when": "view == intents && viewItem == answer",
+					"group": "3_modification"
+				},
+				{
+					"command": "answer.delete",
+					"when": "view == intents && viewItem == answer",
+					"group": "7_modification"
+				},
+				{
+					"command": "command.rename",
+					"when": "view == commands && viewItem == command",
+					"group": "1_modification"
+				},
+				{
+					"command": "command.description",
+					"when": "view == commands && viewItem == command",
+					"group": "2_modification"
+				},
+				{
+					"command": "command.enable",
+					"when": "view == commands && viewItem == command",
+					"group": "2_modification"
+				},
+				{
+					"command": "command.enableHelp",
+					"when": "view == commands && viewItem == command",
+					"group": "2_modification"
+				},
+				{
+					"command": "command.delete",
+					"when": "view == commands && viewItem == command",
+					"group": "7_modification"
+				},
+				{
+					"command": "command.option.add",
+					"when": "view == commands && viewItem == command.options",
+					"group": "inline"
+				},
+				{
+					"command": "command.option.flags",
+					"when": "view == commands && viewItem == command.option",
+					"group": "1_modification"
+				},
+				{
+					"command": "command.option.defaultValue",
+					"when": "view == commands && viewItem == command.option",
+					"group": "2_modification"
+				},
+				{
+					"command": "command.option.description",
+					"when": "view == commands && viewItem == command.option",
+					"group": "2_modification"
+				},
+				{
+					"command": "command.option.delete",
+					"when": "view == commands && viewItem == command.option",
+					"group": "7_modification"
+				},
+				{
+					"command": "task.rename",
+					"when": "view == tasks && viewItem == task",
+					"group": "1_modification"
+				},
+				{
+					"command": "task.schedule",
+					"when": "view == tasks && viewItem == task",
+					"group": "2_modification"
+				},
+				{
+					"command": "task.enable",
+					"when": "view == tasks && viewItem == task",
+					"group": "2_modification"
+				},
+				{
+					"command": "task.delete",
+					"when": "view == tasks && viewItem == task",
+					"group": "7_modification"
+				},
+				{
+					"command": "server.rename",
+					"when": "view == servers && viewItem == server",
+					"group": "1_modification"
+				},
+				{
+					"command": "server.credentials",
+					"when": "view == servers && viewItem == server",
+					"group": "2_modification"
+				},
+				{
+					"command": "server.url",
+					"when": "view == servers && viewItem == server",
+					"group": "2_modification"
+				},
+				{
+					"command": "server.bot.ping",
+					"when": "view == servers && viewItem == server",
+					"group": "3_modification"
+				},
+				{
+					"command": "server.bot.publish",
+					"when": "view == servers && viewItem == server",
+					"group": "inline"
+				},
+				{
+					"command": "server.delete",
+					"when": "view == servers && viewItem == server",
+					"group": "7_modification"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"lint": "tslint \"src/**/*.ts\""
+	},
+	"devDependencies": {
+		"@types/adm-zip": "^0.4.32",
+		"@types/fs-extra": "^8.0.1",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/request": "^2.48.3",
+		"@types/uuid": "^3.4.6",
+		"@types/vscode": "^1.40.0",
+		"glob": "^7.1.5", 
+		"jquery.flowchart": "^1.1.0",
+		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"adm-zip": "^0.4.13",
+		"filenamify": "^4.1.0",
+		"fs-extra": "^8.1.0",
+		"jquery": "^3.4.1",
+		"jquery-contextmenu": "^2.9.0",
+		"jquery-ui-dist": "^1.12.1",
+		"request": "^2.88.0",
+		"rxjs": "^6.5.3",
+		"uuid": "^3.3.3"
+	}
+}

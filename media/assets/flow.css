@@ -1,0 +1,380 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+#flowchart {
+    height: 10000px;
+    width: 10000px;
+}
+
+
+/* Flowchart */
+
+.flowchart-operator-title {
+    padding: 0 !important;
+}
+
+.flowchart-operator {
+    border-radius: 10px;
+}
+
+.flowchart-operator-title {
+    border-radius: 7px 7px 0 0;
+}
+
+.flowchart-operator.selected {
+    border-width: 2px !important;
+    border-style: dashed;
+    border-color: rgb(51, 102, 255) !important;
+    z-index: 20;
+}
+
+.flowchart-operator.hover {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: rgb(51, 102, 255) !important;
+    z-index: 10;
+}
+
+.context-menu-list {
+    z-index: 100 !important;
+}
+
+.context-menu-layer {
+    z-index: 100 !important;
+}
+
+.flowchart-operator {
+    /* width: 250px !important; */
+    min-width: 200px;
+    width: auto !important;
+}
+
+.flowchart-operator .flowchart-operator-title {
+    white-space: normal;
+}
+
+.node-type {
+    padding: 10px 30px 10px 30px;
+    background-color: #CCC;
+    text-align: center;
+    border-bottom: 1px solid #E3E3E3;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.node-body {
+    padding-bottom: 5px;
+}
+
+.flowchart-operator .flowchart-operator-title {
+    height: auto !important;
+}
+
+.flowchart-operator-inputs-outputs {
+    white-space: nowrap;
+}
+
+/* Flowchart */
+
+
+.node-field-label {
+    /* float: left;
+    width: 100%; */
+    width: 70px;
+    overflow: hidden;
+}
+
+.node-field-value {
+    /* float: right;
+    width: 90%; */
+    font-weight: normal;
+    /* padding-left: 20px; */
+    white-space: pre;
+}
+
+.node-field {
+    padding: 0px 10px;
+
+    display: flex;
+}
+
+
+
+.full-width {
+    width: 100%;
+}
+
+.full-dialog mat-dialog-container {
+    padding: 0;
+    overflow: hidden;
+}
+
+.full-dialog mat-dialog-container>* {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.full-dialog-content {
+    flex: 1;
+    overflow: auto;
+}
+
+.full-dialog-actions {
+    padding: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row-reverse;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+/** Dialog X */
+
+.dialogX {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+
+.dialogX-title {
+    overflow: hidden;
+}
+
+.dialogX-container {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+}
+
+.dialogX-card {
+    margin: 10px;
+    overflow: hidden;
+}
+
+.dialogX-content {
+    flex: 1;
+    overflow: auto;
+}
+
+.dialogX-actions {
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row-reverse;
+}
+
+.dialogX-actions button {
+    margin-left: 10px;
+}
+
+.x-shadow {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+
+}
+
+/** Dialog X */
+
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.margin-20 {
+    margin: 20px;
+}
+
+.search-results {
+    flex: 1;
+    overflow: auto;
+}
+
+.search-action-buttons {
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+.search-button {
+    margin-right: 10px !important;
+}
+
+
+/** Flowchart **/
+
+.beforeCode {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+}
+
+.beforeCode:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 25px 25px 0px 0px;
+    border-style: solid;
+    border-color: #8E4EA6 transparent;
+    border-color: #8E4EA6 #ccc;
+    border-radius: 10px 0 0;
+    border-width: 25px 25px 0px 0px;
+    border-style: solid;
+    border-color: #8E4EA6 transparent;
+    border-color: #8E4EA6 #ccc;
+    border-radius: 10px 0 0;
+    border-color: #8E4EA6 #ccc #ccc #8E4EA6;
+    border-width: 25px;
+    border-width: 15px;
+}
+
+.afterCode {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    top: 0;
+    left: 0;
+}
+
+.afterCode:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0px 25px 25px 0px;
+    border-style: solid;
+    border-color: transparent #8E4EA6;
+    border-color: #ccc #8E4EA6;
+    border-radius: 10px 0 0;
+    border-width: 0px 25px 25px 0px;
+    border-style: solid;
+    border-color: transparent #8E4EA6;
+    border-color: #ccc #8E4EA6;
+    border-radius: 0 10px 0 0;
+    border-color: #8E4EA6 #8E4EA6 #ccc #ccc;
+    border-width: 25px;
+    border-width: 15px;
+}
+
+.mat-button-focus-overlay {
+    background-color: transparent !important;
+}
+
+.fancy-list {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
+    margin: 20px;
+}
+
+/*  
+  *, *::after, *::before {
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-app-region: no-drag;
+      cursor: default;
+  } */
+
+
+
+.prism-content-shell {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.prism-cards {
+    flex: 1;
+    overflow: auto;
+}
+
+.prism-card {
+    display: flex;
+    flex-flow: column;
+}
+
+.prism-card-content {
+    flex: 1;
+    overflow: auto;
+}
+
+
+.CodeMirror {
+    border: 1px solid #eee;
+    height: 100% !important;
+}
+
+ngx-codemirror {
+    flex: 1;
+    overflow: hidden;
+}
+
+.active-link {
+    border-left: 10px solid #5bc6e8;
+}
+
+.active-link-under {
+    background-color: #5bc6e8;
+    color: black;
+}
+
+.slim-cell,
+.slim-cell div {
+    width: 100px;
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.slim-cell-150,
+.slim-cell-150 div {
+    width: 150px;
+}
+
+.slim-cell-200,
+.slim-cell-200 div {
+    width: 200px;
+}
+
+.according-headers-align .mat-expansion-panel-header-title,
+.according-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.according-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mat-expansion-panel-body {
+    padding: 0 !important;
+}
+
+.flow-container {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
